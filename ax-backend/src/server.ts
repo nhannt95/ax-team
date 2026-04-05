@@ -9,6 +9,7 @@ import projectsRoutes from './routes/projects.routes';
 import departmentsRoutes from './routes/departments.routes';
 import tasksRoutes from './routes/tasks.routes';
 import logsRoutes from './routes/logs.routes';
+import statsRoutes from './routes/stats.routes';
 
 dotenv.config();
 
@@ -38,6 +39,7 @@ app.use('/api/projects', projectsRoutes);
 app.use('/api/departments', departmentsRoutes);
 app.use('/api/tasks', tasksRoutes);
 app.use('/api/logs', logsRoutes);
+app.use('/api/stats', statsRoutes);
 
 // Endpoint trả về trạng thái kết nối DB để FE biết có cần hiện form config hay không
 app.get('/api/db/status', (_req, res) => {
